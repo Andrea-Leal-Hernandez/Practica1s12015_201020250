@@ -4,20 +4,20 @@
  * and open the template in the editor.
  */
 
-package repositorio;
+package Practica1EDD;
 
 /**
  *
  * @author Andrea
  */
-public class Repositorio {
+public class PrincipalEDD1 {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println("Holaaa");
-       //No se que mas hacer 
+        System.out.println("Hola");
+        // TODO code application logic here
     }
     
 }
