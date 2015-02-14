@@ -17,6 +17,9 @@ public class PrincipalEDD1 {
      */
     public static void main(String[] args) {
         System.out.println("Hola");
+        
+        ListaPlanta l = new ListaPlanta();
+        l.InsertarInicio(null);
         // TODO code application logic here
     }
     
