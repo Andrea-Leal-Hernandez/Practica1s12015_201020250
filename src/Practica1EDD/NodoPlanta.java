@@ -11,31 +11,33 @@ package Practica1EDD;
  * @author Andrea
  */
 public class NodoPlanta {
-    private String datop;
-    NodoPlanta seguido;
+    private String datos;
+    NodoPlanta seguido12;
     
     
-    public NodoPlanta(String i, NodoPlanta s){
-        datop = i;
-        seguido = s;
+    public NodoPlanta(String ii, NodoPlanta ss){
+        datos = ii;
+        seguido12 = ss;
         
         
         
     }
 
-    public String getDatop() {
-        return datop;
+    
+
+    public String getDatop1() {
+        return datos;
     }
 
-    public void setDatop(String datop) {
-        this.datop = datop;
+    public void setDatop1(String datop1) {
+        this.datos = datop1;
     }
 
-    public NodoPlanta getSeguido() {
-        return seguido;
+    public NodoPlanta getSeguido1() {
+        return seguido12;
     }
 
-    public void setSeguido(NodoPlanta seguido) {
-        this.seguido = seguido;
+    public void setSeguido1(NodoPlanta seguido13) {
+        this.seguido12 = seguido13;
     }
 }

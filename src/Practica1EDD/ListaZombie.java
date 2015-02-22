@@ -10,44 +10,44 @@ package Practica1EDD;
  *
  * @author Andrea
  */
-public class ListaPlanta {
-    NodoPlanta inicio;
-    NodoPlanta fin;
+public class ListaZombie {
+    NodoZombie inicio;
+    NodoZombie fin;
     
-    public ListaPlanta(){
+    public ListaZombie(){
         inicio = null;
         fin = null;
         
     }
     
     public void InsertarInicio(String info){
-        NodoPlanta nuevo = new NodoPlanta(info, inicio);
+        NodoZombie nuevo = new NodoZombie(info, inicio);
         inicio = nuevo;
         if(fin == null)
             fin = inicio;    
     }
     
     public void InsertarFin(String info){
-        NodoPlanta nuevo2 = new NodoPlanta(info, null);
-        fin = nuevo2;
+        NodoZombie nuevos = new NodoZombie(info, null);
+        fin = nuevos;
         if(inicio == null){
-            fin = nuevo2;
+            fin = nuevos;
             inicio = fin;           
         }
         else{
-            fin.setSeguido1(nuevo2);
-            fin = nuevo2;
+            fin.setSeguido(nuevos);
+            fin = nuevos;
         }
         
     }
     
     public void EliminarInicio(){
-        inicio = inicio.seguido12;
+        inicio = inicio.seguido11;
     }
     
     public String ExtraerInicio(){
-        String info = inicio.getDatop1();
-        inicio = inicio.getSeguido1();
+        String info = inicio.getDatop();
+        inicio = inicio.getSeguido();
         if(inicio == null){
           fin = null;  
         }
@@ -57,11 +57,11 @@ public class ListaPlanta {
     public String Mostrar(){
         String mostrar = ""; // string que ayudara a mostrar la informacion actual
         
-        NodoPlanta temp = inicio;
+        NodoZombie temp = inicio;
         while(temp != null)
         {
-           System.out.println(temp.getDatop1());
-            temp = temp.seguido12;            
+           System.out.println(temp.getDatop());
+            temp = temp.seguido11;            
         }
         return mostrar;   
     }

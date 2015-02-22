@@ -19,8 +19,8 @@ public class PrincipalEDD1 {
         System.out.println("Hola");
         InicioEDD edd = new InicioEDD();
         edd.setVisible(true);
-        ListaPlanta l = new ListaPlanta();
-        l.InsertarInicio(null);
+        
+        
         // TODO code application logic here
     }
     
