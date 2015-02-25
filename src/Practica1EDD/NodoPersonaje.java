@@ -11,8 +11,7 @@ package Practica1EDD;
  * @author Andrea
  */
 public class NodoPersonaje {
-    
-     public static String cod;
+    public static String cod;
     private String tipoP;
     private String imagenP;
     private String NombreP;
@@ -20,6 +19,16 @@ public class NodoPersonaje {
     private int ataqueP;
     private int defensaP;
     NodoPersonaje siguiente;
+
+    public NodoPersonaje(String tipoP, String imagenP, String NombreP, String distanciaP, int ataqueP, int defensaP, NodoPersonaje siguiente) {
+        this.tipoP = tipoP;
+        this.imagenP = imagenP;
+        this.NombreP = NombreP;
+        this.distanciaP = distanciaP;
+        this.ataqueP = ataqueP;
+        this.defensaP = defensaP;
+        this.siguiente = siguiente;
+    }
 
     public static String getCod() {
         return cod;
@@ -85,16 +94,10 @@ public class NodoPersonaje {
         this.siguiente = siguiente;
     }
 
-    public NodoPersonaje(String tipoP, String imagenP, String NombreP, String distanciaP, int ataqueP, int defensaP, NodoPersonaje siguiente) {
-        this.tipoP = tipoP;
-        this.imagenP = imagenP;
-        this.NombreP = NombreP;
-        this.distanciaP = distanciaP;
-        this.ataqueP = ataqueP;
-        this.defensaP = defensaP;
-        this.siguiente = siguiente;
+    
+   
         
         
-    }
+    
     
 }

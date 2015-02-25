@@ -12,6 +12,8 @@ package Practica1EDD;
  */
 public class Zombies extends javax.swing.JFrame {
 
+    
+    
     /**
      * Creates new form Zombies
      */
@@ -42,12 +44,11 @@ public class Zombies extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jLabel1.setText("CATALOGO_ZOMBIES");
@@ -78,13 +79,6 @@ public class Zombies extends javax.swing.JFrame {
         jLabel5.setText("DEFENSA");
 
         jLabel6.setText("TIPO");
-
-        jButton3.setText("CONTINUAR...");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
 
         jMenu1.setText("File");
         jMenuBar1.add(jMenu1);
@@ -135,10 +129,6 @@ public class Zombies extends javax.swing.JFrame {
                                 .addComponent(jButton1)
                                 .addGap(0, 0, Short.MAX_VALUE)))))
                 .addGap(49, 49, 49))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton3)
-                .addGap(29, 29, 29))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -162,9 +152,7 @@ public class Zombies extends javax.swing.JFrame {
                     .addComponent(jLabel4)
                     .addComponent(jLabel5)
                     .addComponent(jLabel6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 145, Short.MAX_VALUE)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(21, 21, 21))
+                .addContainerGap(203, Short.MAX_VALUE))
         );
 
         pack();
@@ -180,12 +168,6 @@ public class Zombies extends javax.swing.JFrame {
                             ,Integer.parseInt(this.jTextField3.getText()), Integer.parseInt(this.jTextField4.getText()));
     personajeZ.Mostrar();
     }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-        Tablero tab = new Tablero();
-        tab.setVisible(true);
-    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -225,7 +207,6 @@ public class Zombies extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JComboBox jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
