@@ -93,7 +93,7 @@ public class ListaPersonajePlanta {
         }
         nodosplanta2 = mostrar;
         flechaplanta2 = flechaspla;
-        flechaplanta2 = flechaplanta2.substring(0, flechaplanta2.length()-2)+";";
+        flechaplanta2 = flechaplanta2.substring(0, flechaplanta2.length()-2) + ";";
         return mostrar;   
     }
     

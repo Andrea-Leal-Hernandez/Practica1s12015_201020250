@@ -179,7 +179,7 @@ public class Graficas extends javax.swing.JFrame {
        
         
         graficoP = graficoP + "digraph G{" + "\n" + "Personaje;" + "\n" + "Planta;"+ "\n" + "Zombie;" + "\n" + nodosplanta2 + "\n"
-                + nodoszombie2 + "\n" + "Personaje->Planta->" + flechaplanta2 +  "\n" + "Personaje->Zombie->" + flechazombie2 + "}"; 
+                + nodoszombie2 + "\n" + "Personaje->Planta" + flechaplanta2 +  "\n" + "Personaje->Zombie" + flechazombie2 + "}"; 
         System.out.println(graficoP);
         
 

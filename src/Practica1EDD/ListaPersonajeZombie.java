@@ -100,7 +100,7 @@ public class ListaPersonajeZombie {
         nodoszombie2 = mostrar;
         
         flechazombie2 = flechaszo;
-        flechazombie2 = flechazombie2.substring(0, flechazombie2.length()-2)+";";
+        flechazombie2 = flechazombie2.substring(0, flechazombie2.length()-2) + ";";
         return mostrar;   
     }
 }
