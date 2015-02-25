@@ -42,9 +42,9 @@ public class SecundariaZombi extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        jTA2 = new javax.swing.JTextArea();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
         jLabel1.setText("ZOMBI");
@@ -93,9 +93,9 @@ public class SecundariaZombi extends javax.swing.JFrame {
             }
         });
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        jTA2.setColumns(20);
+        jTA2.setRows(5);
+        jScrollPane1.setViewportView(jTA2);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -172,24 +172,24 @@ public class SecundariaZombi extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        Tablero tabla = new Tablero();
-        tabla.setVisible(true);
+        Zombies zom = new Zombies();
+        zom.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        zo.InsertarInicio(this.jTextField1.getText()); // ira insertando desde abajo osea a-b-c-d-e etc
-           zo.InsertarInicio(this.jTextField2.getText());
+        zo.InsertarFin(this.jTextField1.getText()); // ira insertando desde abajo osea a-b-c-d-e etc
+           zo.InsertarFin(this.jTextField2.getText());
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        zo.InsertarInicio(this.jTextField3.getText());
+        zo.InsertarFin(this.jTextField3.getText());
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        zo.Mostrar();
+        this.jTA2.setText(zo.Mostrar());
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
@@ -236,7 +236,7 @@ public class SecundariaZombi extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextArea jTA2;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;

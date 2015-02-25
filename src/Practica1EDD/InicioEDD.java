@@ -6,6 +6,18 @@
 
 package Practica1EDD;
 
+import static Practica1EDD.ListaPlanta.flechaplanta;
+import static Practica1EDD.ListaPlanta.flechazombie;
+import static Practica1EDD.ListaPlanta.nodosplanta;
+import static Practica1EDD.ListaPlanta.nodoszombie;
+import static Practica1EDD.SecundariaPlanta.lp;
+import static Practica1EDD.SecundariaZombi.zo;
+import java.io.File;
+import java.io.PrintWriter;
+import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
+import javax.swing.filechooser.FileNameExtensionFilter;
+
 /**
  *
  * @author Andrea
@@ -28,21 +40,17 @@ public class InicioEDD extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jButton5 = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jLabel1.setBackground(new java.awt.Color(204, 204, 204));
-        jLabel1.setFont(new java.awt.Font("Microsoft Uighur", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(204, 0, 255));
-        jLabel1.setText("Plantas vs Zombis Guatemalteco");
-
-        jButton1.setBackground(new java.awt.Color(0, 204, 204));
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton1.setBackground(new java.awt.Color(0, 255, 255));
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton1.setText("JUGADOR PLANTA");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -50,8 +58,9 @@ public class InicioEDD extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(255, 0, 51));
-        jButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton2.setBackground(new java.awt.Color(0, 102, 102));
+        jButton2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("JUGADOR ZOMBI");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -59,50 +68,72 @@ public class InicioEDD extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setBackground(new java.awt.Color(204, 0, 255));
-        jButton3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton3.setBackground(new java.awt.Color(51, 153, 255));
+        jButton3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jButton3.setText("COMENZAR");
         jButton3.setActionCommand("COMENZAR ");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
-        jButton4.setBackground(new java.awt.Color(255, 153, 0));
-        jButton4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton4.setBackground(new java.awt.Color(0, 0, 0));
+        jButton4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(255, 255, 255));
         jButton4.setText("ELIMINAR");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Practica1EDD/fondo_pz.jpg"))); // NOI18N
+
+        jButton5.setText("jButton5");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(151, 151, 151)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton2)
-                            .addComponent(jButton1)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(45, 45, 45)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButton3)
-                                .addGap(77, 77, 77)
-                                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(32, Short.MAX_VALUE))
+                .addGap(50, 50, 50)
+                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(290, 290, 290)
+                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(610, 610, 610)
+                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(550, 550, 550)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 780, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
-                .addComponent(jButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
-                .addComponent(jButton2)
-                .addGap(47, 47, 47)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3)
-                    .addComponent(jButton4))
-                .addGap(46, 46, 46))
+                .addGap(60, 60, 60)
+                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(170, 170, 170)
+                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(80, 80, 80)
+                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(400, 400, 400)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -119,6 +150,80 @@ public class InicioEDD extends javax.swing.JFrame {
         SecundariaZombi zom = new SecundariaZombi();
         zom.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+       String grafico;
+       grafico = "";
+        lp.DibujarPlanta();
+        zo.DibujarZombie();
+        
+        grafico = grafico + "digraph G{" + "\n" + "Usuario;" + "\n" + "Planta;"+ "\n" + "Zombie;" + "\n" + nodosplanta + "\n"
+                + nodoszombie + "\n" + "Usuario->Planta->" + flechaplanta +  "\n" + "Usuario->Zombie->" + flechazombie + "}"; 
+        System.out.println(grafico);
+        
+
+        if(grafico.matches("[[ ]*[\n]*[\t]]*"))
+        {
+            JOptionPane.showMessageDialog(null, "no hay texto para guardar!", "ERROR", JOptionPane.ERROR_MESSAGE);
+        }else{
+            JFileChooser guardar = new JFileChooser();
+            guardar.addChoosableFileFilter(new FileNameExtensionFilter("Todos los archivos *.txt",".TXT",".Txt"));
+            int opcion = guardar.showSaveDialog(null);
+            try{
+                if (opcion == JFileChooser.APPROVE_OPTION)
+                {
+                   File f = guardar.getSelectedFile();
+                   String path = f.getAbsolutePath();
+                   PrintWriter pw = new PrintWriter(f);
+                   pw.print(grafico);
+                   pw.close();
+                   
+                   if(!(path.endsWith(".txt"))){
+                       File temp = new File(path + ".Txt");
+                       f.renameTo(temp);
+                   }
+                   JOptionPane.showMessageDialog(null, "Se Ha Guardado El Archivo Correctamente", "Guardado", JOptionPane.INFORMATION_MESSAGE);
+                }
+            }catch (Exception e){
+                JOptionPane.showMessageDialog(null, "Error Al Guardar El Archivo", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        }
+   
+    try {
+
+        String dotPath = "C:\\Program Files (x86)\\Graphviz2.38\\bin\\dot.exe";
+
+        String fileInputPath = "C:\\Users\\Andrea\\Desktop\\practica1_edd\\Jugador.txt";
+        String fileOutputPath = "C:\\Users\\Andrea\\Desktop\\practica1_edd\\Jugador.jpg";
+
+        String tParam = "-Tjpg";
+        String tOParam = "-o";
+
+        String[] cmd = new String[5];
+        cmd[0] = dotPath;
+        cmd[1] = tParam;
+        cmd[2] = fileInputPath;
+        cmd[3] = tOParam;
+        cmd[4] = fileOutputPath;
+
+        Runtime rt = Runtime.getRuntime();
+
+        rt.exec(cmd);
+
+    } catch (Exception ex) {
+        ex.printStackTrace();
+    } finally {
+    }     
+
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -160,6 +265,7 @@ public class InicioEDD extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }

@@ -10,9 +10,14 @@ package Practica1EDD;
  *
  * @author Andrea
  */
+
 public class ListaPlanta {
-    NodoPlanta inicio;
-    NodoPlanta fin;
+    NodoUsuario inicio;
+    NodoUsuario fin;
+   public static String nodosplanta;
+   public static String nodoszombie;
+   public static String flechazombie;
+   public static String flechaplanta;
     
     public ListaPlanta(){
         inicio = null;
@@ -21,15 +26,15 @@ public class ListaPlanta {
     }
     
     public void InsertarInicio(String info){
-        NodoPlanta nuevo = new NodoPlanta(info, inicio);
+        NodoUsuario nuevo = new NodoUsuario(info, inicio);
         inicio = nuevo;
         if(fin == null)
             fin = inicio;    
     }
     
     public void InsertarFin(String info){
-        NodoPlanta nuevo2 = new NodoPlanta(info, null);
-        fin = nuevo2;
+        NodoUsuario nuevo2 = new NodoUsuario(info, null);
+       
         if(inicio == null){
             fin = nuevo2;
             inicio = fin;           
@@ -57,13 +62,30 @@ public class ListaPlanta {
     public String Mostrar(){
         String mostrar = ""; // string que ayudara a mostrar la informacion actual
         
-        NodoPlanta temp = inicio;
+        NodoUsuario temp = inicio;
         while(temp != null)
         {
+            mostrar = mostrar + temp.getDatop1()+ "\n";
            System.out.println(temp.getDatop1());
             temp = temp.seguido12;            
         }
         return mostrar;   
     }
     
+    public String DibujarPlanta(){
+        String mostrar = ""; // string que ayudara a mostrar la informacion actual
+        String flechas = "";
+        NodoUsuario temp = inicio;
+        while(temp != null)
+        {
+            mostrar = mostrar + temp.getDatop1() + ";\n" ;
+            flechas = flechas + temp.getDatop1() + "->";
+            temp = temp.seguido12;            
+        }
+        nodosplanta = mostrar;
+        flechaplanta = flechas;
+        flechaplanta = flechaplanta.substring(0, flechaplanta.length()-2)+";";
+        return mostrar;   
+    }
+     
 }

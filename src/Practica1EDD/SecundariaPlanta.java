@@ -20,6 +20,7 @@ public class SecundariaPlanta extends javax.swing.JFrame {
     public SecundariaPlanta() {
         initComponents();
         
+        
     }
 
     /**
@@ -44,7 +45,7 @@ public class SecundariaPlanta extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTA1 = new javax.swing.JTextArea();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
         jLabel1.setText("PLANTA");
@@ -171,15 +172,16 @@ public class SecundariaPlanta extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        Tablero tab = new Tablero();
-        tab.setVisible(true);
+        Plantas pla = new Plantas();
+        pla.setVisible(true);
+        
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         
-     lp.InsertarInicio(this.jTextField1.getText()); // ira insertando desde abajo osea a-b-c-d-e etc
-           lp.InsertarInicio(this.jTextField2.getText());
+     lp.InsertarFin(this.jTextField1.getText()); // ira insertando desde abajo osea a-b-c-d-e etc
+           lp.InsertarFin(this.jTextField2.getText());
            
            
         
@@ -187,13 +189,15 @@ public class SecundariaPlanta extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        lp.InsertarInicio(this.jTextField3.getText());
+        lp.InsertarFin(this.jTextField3.getText());
         
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        lp.Mostrar();
+        this.jTA1.setText(lp.Mostrar());
+        
+         
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
