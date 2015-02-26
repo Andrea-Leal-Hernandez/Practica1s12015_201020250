@@ -4,22 +4,20 @@
  * and open the template in the editor.
  */
 
-package Practica1EDD;
+package Practica1EDD.Clases;
+
+import static Practica1EDD.Clases.ListaPlanta.flechazombie;
+import static Practica1EDD.Clases.ListaPlanta.nodoszombie;
 
 /**
  *
  * @author Andrea
  */
-
-public class ListaPlanta {
+public class ListaZombie {
     NodoUsuario inicio;
     NodoUsuario fin;
-   public static String nodosplanta;
-   public static String nodoszombie;
-   public static String flechazombie;
-   public static String flechaplanta;
     
-    public ListaPlanta(){
+    public ListaZombie(){
         inicio = null;
         fin = null;
         
@@ -33,15 +31,15 @@ public class ListaPlanta {
     }
     
     public void InsertarFin(String info){
-        NodoUsuario nuevo2 = new NodoUsuario(info, null);
-       
+        NodoUsuario nuevos = new NodoUsuario(info, null);
+        
         if(inicio == null){
-            fin = nuevo2;
+            fin = nuevos;
             inicio = fin;           
         }
         else{
-            fin.setSeguido1(nuevo2);
-            fin = nuevo2;
+            fin.setSeguido1(nuevos);
+            fin = nuevos;
         }
         
     }
@@ -71,21 +69,21 @@ public class ListaPlanta {
         }
         return mostrar;   
     }
-    
-    public String DibujarPlanta(){
+   public String DibujarZombie(){
         String mostrar = ""; // string que ayudara a mostrar la informacion actual
-        String flechas = "";
+        String flechasz = "";
         NodoUsuario temp = inicio;
         while(temp != null)
         {
             mostrar = mostrar + temp.getDatop1() + ";\n" ;
-            flechas = flechas + temp.getDatop1() + "->";
+            flechasz = flechasz + temp.getDatop1() + "->";
+           System.out.println(temp.getDatop1());
             temp = temp.seguido12;            
         }
-        nodosplanta = mostrar;
-        flechaplanta = flechas;
-        flechaplanta = flechaplanta.substring(0, flechaplanta.length()-2)+";";
-        return mostrar;   
-    }
-     
+        nodoszombie = mostrar;
+        flechazombie = flechasz;
+        flechazombie = flechazombie.substring(0, flechazombie.length()-2)+ ";";
+        
+        return mostrar;  
+    } 
 }

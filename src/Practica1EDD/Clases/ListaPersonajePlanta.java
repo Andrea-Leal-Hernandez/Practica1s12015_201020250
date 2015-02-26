@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package Practica1EDD;
+package Practica1EDD.Clases;
 
 /**
  *
@@ -71,6 +71,8 @@ public class ListaPersonajePlanta {
         }
         return mostrar;   
     }
+    
+    
     
     public String DibujarPersonajePlanta(){
         String mostrar = ""; // string que ayudara a mostrar la informacion actual

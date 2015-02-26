@@ -6,14 +6,14 @@
 
 package Practica1EDD;
 
-import static Practica1EDD.ListaPersonajePlanta.flechaplanta2;
-import static Practica1EDD.ListaPersonajePlanta.nodosplanta2;
-import static Practica1EDD.ListaPersonajePlanta.flechazombie2;
-import static Practica1EDD.ListaPersonajePlanta.nodoszombie2;
-import static Practica1EDD.ListaPlanta.flechaplanta;
-import static Practica1EDD.ListaPlanta.flechazombie;
-import static Practica1EDD.ListaPlanta.nodosplanta;
-import static Practica1EDD.ListaPlanta.nodoszombie;
+import static Practica1EDD.Clases.ListaPersonajePlanta.flechaplanta2;
+import static Practica1EDD.Clases.ListaPersonajePlanta.nodosplanta2;
+import static Practica1EDD.Clases.ListaPersonajePlanta.flechazombie2;
+import static Practica1EDD.Clases.ListaPersonajePlanta.nodoszombie2;
+import static Practica1EDD.Clases.ListaPlanta.flechaplanta;
+import static Practica1EDD.Clases.ListaPlanta.flechazombie;
+import static Practica1EDD.Clases.ListaPlanta.nodosplanta;
+import static Practica1EDD.Clases.ListaPlanta.nodoszombie;
 import static Practica1EDD.Plantas.personajeP;
 import static Practica1EDD.SecundariaPlanta.lp;
 import static Practica1EDD.SecundariaZombi.zo;
@@ -49,8 +49,9 @@ public class Graficas extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton1.setText("USUARIO");
@@ -68,34 +69,43 @@ public class Graficas extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 153, 51));
         jLabel1.setText("Graficas");
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Practica1EDD/Imagenes/srt.png"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(104, 104, 104)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 237, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(147, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(135, 135, 135))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(170, 170, 170)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(60, 60, 60)
+                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(90, 90, 90)
+                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(41, 41, 41)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(197, Short.MAX_VALUE))
+                .addGap(20, 20, 20)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(100, 100, 100)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(180, 180, 180)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -172,14 +182,14 @@ public class Graficas extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        String graficoP;
+       String graficoP;
        graficoP = "";
        personajeP.DibujarPersonajePlanta();
        personajeZ.DibujarPersonajeZombie();
        
         
         graficoP = graficoP + "digraph G{" + "\n" + "Personaje;" + "\n" + "Planta;"+ "\n" + "Zombie;" + "\n" + nodosplanta2 + "\n"
-                + nodoszombie2 + "\n" + "Personaje->Planta" + flechaplanta2 +  "\n" + "Personaje->Zombie" + flechazombie2 + "}"; 
+                + nodoszombie2 + "\n" + "Personaje->Planta->" + flechaplanta2 +  "\n" + "Personaje->Zombie->" + flechazombie2 + "}"; 
         System.out.println(graficoP);
         
 
@@ -234,7 +244,7 @@ public class Graficas extends javax.swing.JFrame {
     } catch (Exception ex) {
         ex.printStackTrace();
     } finally {
-    }     
+    }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
@@ -276,5 +286,6 @@ public class Graficas extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel3;
     // End of variables declaration//GEN-END:variables
 }

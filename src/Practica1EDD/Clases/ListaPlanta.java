@@ -4,20 +4,22 @@
  * and open the template in the editor.
  */
 
-package Practica1EDD;
-
-import static Practica1EDD.ListaPlanta.flechazombie;
-import static Practica1EDD.ListaPlanta.nodoszombie;
+package Practica1EDD.Clases;
 
 /**
  *
  * @author Andrea
  */
-public class ListaZombie {
+
+public class ListaPlanta {
     NodoUsuario inicio;
     NodoUsuario fin;
+   public static String nodosplanta;
+   public static String nodoszombie;
+   public static String flechazombie;
+   public static String flechaplanta;
     
-    public ListaZombie(){
+    public ListaPlanta(){
         inicio = null;
         fin = null;
         
@@ -31,15 +33,15 @@ public class ListaZombie {
     }
     
     public void InsertarFin(String info){
-        NodoUsuario nuevos = new NodoUsuario(info, null);
-        
+        NodoUsuario nuevo2 = new NodoUsuario(info, null);
+       
         if(inicio == null){
-            fin = nuevos;
+            fin = nuevo2;
             inicio = fin;           
         }
         else{
-            fin.setSeguido1(nuevos);
-            fin = nuevos;
+            fin.setSeguido1(nuevo2);
+            fin = nuevo2;
         }
         
     }
@@ -69,21 +71,21 @@ public class ListaZombie {
         }
         return mostrar;   
     }
-   public String DibujarZombie(){
+    
+    public String DibujarPlanta(){
         String mostrar = ""; // string que ayudara a mostrar la informacion actual
-        String flechasz = "";
+        String flechas = "";
         NodoUsuario temp = inicio;
         while(temp != null)
         {
             mostrar = mostrar + temp.getDatop1() + ";\n" ;
-            flechasz = flechasz + temp.getDatop1() + "->";
-           System.out.println(temp.getDatop1());
+            flechas = flechas + temp.getDatop1() + "->";
             temp = temp.seguido12;            
         }
-        nodoszombie = mostrar;
-        flechazombie = flechasz;
-        flechazombie = flechazombie.substring(0, flechazombie.length()-2)+ ";";
-        
-        return mostrar;  
-    } 
+        nodosplanta = mostrar;
+        flechaplanta = flechas;
+        flechaplanta = flechaplanta.substring(0, flechaplanta.length()-2)+";";
+        return mostrar;   
+    }
+     
 }

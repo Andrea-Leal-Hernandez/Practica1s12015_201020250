@@ -4,12 +4,12 @@
  * and open the template in the editor.
  */
 
-package Practica1EDD;
+package Practica1EDD.Clases;
 
-import static Practica1EDD.ListaPersonajePlanta.flechaplanta2;
-import static Practica1EDD.ListaPersonajePlanta.flechazombie2;
-import static Practica1EDD.ListaPersonajePlanta.nodosplanta2;
-import static Practica1EDD.ListaPersonajePlanta.nodoszombie2;
+import static Practica1EDD.Clases.ListaPersonajePlanta.flechaplanta2;
+import static Practica1EDD.Clases.ListaPersonajePlanta.flechazombie2;
+import static Practica1EDD.Clases.ListaPersonajePlanta.nodosplanta2;
+import static Practica1EDD.Clases.ListaPersonajePlanta.nodoszombie2;
 
 /**
  *
@@ -76,6 +76,7 @@ public class ListaPersonajeZombie {
         return mostrar;   
     }
     
+    
     public String DibujarPersonajeZombie(){
         String mostrar = ""; // string que ayudara a mostrar la informacion actual
         String flechaszo = "";
@@ -89,18 +90,16 @@ public class ListaPersonajeZombie {
             mostrar = mostrar + temp.getAtaqueP()+ ";\n" ;
             flechaszo = flechaszo + temp.getAtaqueP()+ "->"; 
             mostrar = mostrar + temp.getDefensaP()+ ";\n" ;
-            flechaszo = flechaszo + temp.getDefensaP()+ "->";
+            flechaszo = flechaszo + temp.getDefensaP()+ "->"; 
             mostrar = mostrar + temp.getTipoP()+ ";\n" ;
             flechaszo = flechaszo + temp.getTipoP()+ "->"; 
             
             temp = temp.siguiente;            
         }
-        
-        
         nodoszombie2 = mostrar;
-        
         flechazombie2 = flechaszo;
-        flechazombie2 = flechazombie2.substring(0, flechazombie2.length()-2) + ";";
+        flechazombie2 = flechazombie2.substring(0, flechazombie2.length()-2)+";";
         return mostrar;   
     }
+    
 }

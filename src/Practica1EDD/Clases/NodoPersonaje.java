@@ -4,12 +4,13 @@
  * and open the template in the editor.
  */
 
-package Practica1EDD;
+package Practica1EDD.Clases;
 
 /**
  *
  * @author Andrea
  */
+
 public class NodoPersonaje {
     public static String cod;
     private String tipoP;
@@ -92,12 +93,6 @@ public class NodoPersonaje {
 
     public void setSiguiente(NodoPersonaje siguiente) {
         this.siguiente = siguiente;
-    }
-
-    
-   
-        
-        
-    
+    }    
     
 }

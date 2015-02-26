@@ -1,5 +1,5 @@
 
-package Practica1EDD;
+package Practica1EDD.Clases;
 
 import java.io.File;
 import javax.swing.filechooser.FileFilter;
